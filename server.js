@@ -12,17 +12,18 @@ process.on('uncaughtException', (err) => {
 })
 
 
-// const URI = process.env.MONGODB;
-// // mongo connection
-// mongoose
-//   .connect(URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => {
-//     console.log("Mongo Db Connected");
-//   })
-//   .catch((err) => console.log(err));
+const URI = process.env.MONGODB;
+
+// mongo connection
+mongoose
+  .connect(URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Mongo Db Connected");
+  })
+  .catch((err) => console.log(err));
 
 const PORT = process.env.PORT || 5000;
 
