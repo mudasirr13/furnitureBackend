@@ -9,7 +9,7 @@ const categorySchema = new mongoose.Schema(
       minlength: 3,
       maxlength: 20,
     },
-    categoryDescriptipn: {
+    categoryDescription: {
       type: String,
       default: "category description",
       trim: true,
